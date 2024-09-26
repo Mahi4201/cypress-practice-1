@@ -89,9 +89,9 @@ describe("working with drowpdowns",()=>{
 
       cy.get(':nth-child(2) > :nth-child(5) > select').select("Sedan")
 
-
-    })
-})
+      })
+      
+  })
 
 
 
