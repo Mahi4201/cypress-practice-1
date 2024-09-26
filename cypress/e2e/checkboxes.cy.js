@@ -21,4 +21,31 @@ describe("working with checkboxes",()=>{
 
     })
 
+    
+    
+        it('should check the first 4 checkboxes', () => {
+       
+          cy.visit('https://www.dezlearn.com/webtable-example/');
+      
+         
+          cy.get('input[type="checkbox"]').each((checkbox, index) => {
+            if (index < 4) {
+              cy.wrap(checkbox).check();
+            }
+          });
+        });
+
+        it('should check the 5th to 8th checkboxes', () => {
+            
+            cy.visit('https://www.dezlearn.com/webtable-example/');
+        
+            
+            cy.get('input[type="checkbox"]').each((checkbox, index) => {
+              if (index >= 4 && index <= 7) {
+                cy.wrap(checkbox).check();
+              }
+            });
+          });
+   
+
 })
