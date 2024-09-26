@@ -85,14 +85,13 @@ describe("working with drowpdowns",()=>{
         
         cy.visit("https://www.dezlearn.com/webtable-example/")
 
-        //cy.get('[value="Sedan"]').eq(1).click()
-        cy.get('input[type="checkbox"]').eq(0).check()
+      cy.get('table>tbody>tr:nth-child(2)>td:nth-child(5)>select').select("Hatchback")
 
+      cy.get(':nth-child(2) > :nth-child(5) > select').select("Sedan")
+
+      })
       
-
-
-    })
-})
+  })
 
 
 
